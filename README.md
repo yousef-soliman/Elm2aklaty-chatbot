@@ -24,7 +24,7 @@ after accept request merge the branch
 * [Asmaa Issa](https://github.com/Asmaa-Issa)
 * [Heba mohamed](https://github.com/HebaGadElRab)
 * [moamen elsayed](https://github.com/moamenelsayed)
-
+* [waled amr](https://github.com/waled amr)
 
 add your name as team member by edit README
 
