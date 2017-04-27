@@ -1,5 +1,5 @@
 
-  body {
+body {
 padding-top: 0;
 font-size: 12px;
 color: #777;
@@ -16,18 +16,11 @@ small, .small {
 font-size: 85%;
 }
 
-.chat-message {
-padding: 60px 20px 115px;
-}
-
 .chat {
 list-style: none;
-margin: 0;
+margin: 0px;
 }
 
-.chat-message{
-background: #f9f9f9;
-}
 
 .chat li img {
 width: 45px;
@@ -106,7 +99,7 @@ transform: rotate(45deg);
 }
 
 .chat li {
-margin: 15px 0;
+margin: 15px 0px;
 }
 
 .chat li.right .chat-body {
@@ -115,14 +108,15 @@ background-color: #fff;
 }
 
 .chat-box {
-padding-top: 15px;
-padding-bottom: 15px;
 position: fixed;
-width: 780px;
-left: 46px;
+width: inherit;
 bottom: 0px;
 }
 
+.chat-box-padding{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
 .primary-font {
 color: #3c8dbc;
 }

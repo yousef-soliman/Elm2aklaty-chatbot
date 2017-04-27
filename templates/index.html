@@ -16,13 +16,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="static/css/bootstrap.css" rel="stylesheet">
     <link href="static/css/style.css" rel="stylesheet">
+
 </head>
 <body>
-<div class="container bootstrap snippet">
+  <div class="container bootstrap snippet">
     <div class="row">
         <!-- selected chat -->
     	<div class="col-md-8 col-md-offset-2 bg-white ">
-                <ul class="chat">
+                <ul class="chat" id="chatList" >
                       <li class="left clearfix">
                     	<span class="chat-img pull-left">
                     		<img src="static/img/user_3.jpg" alt="User Avatar">
@@ -55,18 +56,21 @@
 
 		</div>
 	</div>
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2 chat-box bg-white">
+
+  <div class="row chat-box">
+    <div class="col-md-8 col-md-offset-2  bg-white chat-box-padding">
       <div class="input-group">
-        <input class="form-control border no-shadow no-rounded" placeholder="Type your message here">
+        <input id="textMessage" class="form-control border no-shadow no-rounded" placeholder="Type your message here" >
         <span class="input-group-btn">
-          <button class="btn btn-success no-rounded" type="button">Send</button>
+          <button class="btn btn-success no-rounded" type="button" onclick="send()">Send</button>
         </span>
       </div><!-- /input-group -->
     </div>
   </div>
 </div>
+<script type="text/javascript" src = "static/js/script.js">
 
+</script>
 
 </body>
 </html>
