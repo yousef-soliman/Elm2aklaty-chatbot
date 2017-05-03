@@ -71,25 +71,6 @@
 <script type="text/javascript" src = "static/js/script.js">
 
 </script>
-	
-	<form method="POST" action="{{ url_for('form') }}">
-		{{ form.csrf.token }}
-		{{ form.username.label }}
-		{{ form.username }}
-		<ul>
-		{% for error in form.username.errors %}
-			<li style = "color:red;"> {{ error }}</li>
-		{% endfor %}
-		</ul>
-		{{ form.password.label }}
-		{{ from.password }}
-		<ul>
-		{% for error in form.password.errors %}
-			<li style = "color:red;"> {{ error }}</li>
-		{% endfor %}
-		</ul>
-		<input type="submit" value="submit">
-	</form>
 
 </body>
 </html>
