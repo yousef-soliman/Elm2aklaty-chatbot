@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Google Maps User Location</title>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <style>
+    html, body, #map_canvas{width:90%;height:90%;}
+    </style>
+   </head>
+   <body onload="locate()">
+    <div id="map_canvas"></div>
+	<div style="float:right;">
+	<button type="button" onclick="delete_markers()">reset here!</button>
+	<button id="ok" type="button" onclick="valid()">ok</button>
+	</div>
+    </body>
+  <script>
+  var marker=null ;
+  var ismarked = false;
+   // var im = 'http://www.robotwoods.com/dev/misc/bluecircle.png';
+   function locate(){
+        navigator.geolocation.getCurrentPosition(initialize,fail);
+    }
+
+    function initialize(position) {
+        var myLatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+        var mapOptions = {
+          zoom: 17,
+          center: myLatLng,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(document.getElementById('map_canvas'),
+                                      mapOptions);
+   /*     var userMarker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            icon: im
+        });*/ 
+		
+		
+		map.addListener('click', function(e) {
+        placeMarker(e.latLng, map);
+});
+
+function placeMarker(position, map) {
+    if(!ismarked){
+		 marker = new google.maps.Marker({
+			position: position,
+			map: map
+		});
+		map.panTo(position);
+		ismarked = true;
+	}
+}
+      }
+           
+{
+}		   
+	  function delete_markers()
+	  
+	  {
+	  ismarked=false; 
+	  marker.setMap(null);
+	  }
+	  
+	  function valid()
+	  { if(marker==null)
+	  { 
+         alert("you didn't mark your location");
+               		 
+	  }
+	  }
+
+     function fail(){
+         alert('navigator.geolocation failed, may not be supported');
+     }
+    </script>
+</html>
