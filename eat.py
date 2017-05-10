@@ -11,4 +11,4 @@ def eat():
                                   {"name": "italian", "value": u'ايطالي'}
                                   ]
                         }
-        print (json_string["message"])
+        return (json_string["message"])
