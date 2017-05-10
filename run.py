@@ -3,7 +3,7 @@ from flask import Flask,jsonify
 from flask import render_template
 from werkzeug.utils import secure_filename
 from flaskext.mysql import MySQL
-
+import random
 app = Flask(__name__)
 
 mysql = MySQL()
@@ -35,6 +35,18 @@ def allrestaurants():
         buttons.append({"name":name, "value":name})
     json_string = {"message":"","buttons":buttons}
     return jsonify(json_string)
+
+@app.route("/wanttoeat")
+def eat():
+        msg = [u'عارف مكانك ولا هتتعبنا',u'طيب اشطة حدد مكانك',u'طب يلا عشان تعزمني ']
+        randmsg=random.choice(msg)
+        json_string = {"message": randmsg,"do":"locate()",
+                       "buttons":[{"name":"fish","value":u'سمك'},
+                                  {"name":"meat","value":u'لحمة'},
+                                  {"name": "italian", "value": u'ايطالي'}
+                                  ]
+                        }
+        return (json_string["message"])
 
 if __name__ == '__main__':
     app.run(debug=True)
