@@ -36,8 +36,9 @@ def allrestaurants():
     json_string = {"message":"","buttons":buttons}
     return jsonify(json_string)
 
+
 @app.route("/wanttoeat")
-def eat():
+def wanttoeat():
         msg = [u'عارف مكانك ولا هتتعبنا',u'طيب اشطة حدد مكانك',u'طب يلا عشان تعزمني ']
         randmsg=random.choice(msg)
         json_string = {"message": randmsg,"do":"locate()",
@@ -47,6 +48,7 @@ def eat():
                                   ]
                         }
         return (json_string["message"])
+
 
 if __name__ == '__main__':
     app.run(debug=True)
