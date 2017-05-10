@@ -125,3 +125,14 @@ a:hover, a:active, a:focus {
 text-decoration: none;
 outline: 0;
 }
+
+.tag{
+  display:block;
+  padding-left:.6em;
+  padding-right:.6em;
+  line-height:inherit;
+  font-size:.9375em;
+  font-weight:normal;
+  color:#778187;
+  background:#f2f2f3
+}

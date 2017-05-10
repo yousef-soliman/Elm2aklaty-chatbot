@@ -19,3 +19,17 @@ function send() {
   input.value = "";
   newMessageFromUser(message)
 }
+$(document).ready(function(){
+    $("button").click(function(){
+        $.get("http://localhost:5000/getJson", function(data){
+            alert("Data: " + data);
+        });
+    });
+});
+function addButton(str){
+  var x = document.getElementsByTagName("UL");
+  button = document.createElement("button");
+  button.innerHTML = str;
+  //button.setAttribute("class","tag")
+  x[0].appendChild(button);
+}
