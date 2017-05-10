@@ -88,3 +88,5 @@ venu/
 
 # Rope project settings
 .ropeproject
+
+.vscode/
