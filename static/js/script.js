@@ -21,7 +21,7 @@ function send() {
 }
 $(document).ready(function(){
     $("button").click(function(){
-        $.get("http://localhost:5000/getJson", function(data){
+        $.get("http://localhost:5000/allrestaurants", function(data){
             alert("Data: " + data);
         });
     });
