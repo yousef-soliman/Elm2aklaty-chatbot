@@ -14,45 +14,18 @@
     -->
     <title>Elm2aklaty</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="static/css/bootstrap.css?q=1280549780" rel="stylesheet">
-    <link href="static/css/style.css?q=1280549780" rel="stylesheet">
+    <link href="static/css/bootstrap.css" rel="stylesheet">
+    <link href="static/css/style.css?q=26" rel="stylesheet">
 		<script type ="text/javascript" src="static/js/jquery-3.2.1.min.js?q=1280549780"></script>
-
+    
 </head>
 <body>
 <div class="container bootstrap snippet">
     <div class="row">
         <!-- selected chat -->
-    	<div class="col-md-8 col-md-offset-2 bg-white ">
+    	<div class="col-md-8 col-md-offset-2 bg-white margin-div" id ='chatBody'>
                 <ul class="chat" id="chatList" >
-                      <li class="left clearfix">
-                    	<span class="chat-img pull-left">
-                    		<img src="static/img/user_3.jpg?q=12" alt="User Avatar">
-                    	</span>
-                    	<div class="chat-body clearfix">
-                    		<div class="header">
-                    			<strong class="primary-font">John Doe</strong>
-                    			<small class="pull-right text-muted"><i class="fa fa-clock-o"></i> 12 mins ago</small>
-                    		</div>
-                    		<p>
-                    			Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    		</p>
-                    	</div>
-                    </li>
-                    <li class="right clearfix">
-                    	<span class="chat-img pull-right">
-                    		<img src="static/img/user_1.jpg" alt="User Avatar">
-                    	</span>
-                    	<div class="chat-body clearfix">
-                    		<div class="header">
-                    			<strong class="primary-font">Sarah</strong>
-                    			<small class="pull-right text-muted"><i class="fa fa-clock-o"></i> 13 mins ago</small>
-                    		</div>
-                    		<p>
-                    			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare dolor, quis ullamcorper ligula sodales at.
-                    		</p>
-                    	</div>
-                    </li>
+                      
                 </ul>
 
 		</div>
@@ -60,7 +33,9 @@
 
   <div class="row chat-box">
     <div class="col-md-8 col-md-offset-2  bg-white chat-box-padding">
-      <div class="input-group">
+      <button type="button" id="wanttoeat" class = "btn btn-success">عايز أكل</button>
+			<button type ="button" id="allrestaurants" class= "btn btn-success">كل المطاعم</button>
+			<div class="input-group">
         <input id="textMessage" class="form-control border no-shadow no-rounded" placeholder="Type your message here" >
         <span class="input-group-btn">
           <button class="btn btn-success no-rounded" type="button" onclick="send()">Send</button>
@@ -69,8 +44,9 @@
     </div>
   </div>
 </div>
-<button id='button'></button>
-		<script type="text/javascript" src = "static/js/script.js?q=12805499"></script>
+
+		<script type="text/javascript" class="" src = "static/js/script.js?q=12805496156"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjui4P2G12QB-1Z4ayVS691bggRhUblMM"></script>
 
 </body>
 </html>

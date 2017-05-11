@@ -10,6 +10,7 @@ margin-top:20px;
 
 .bg-white {
 background-color: #fff;
+align-content: center;
 }
 
 small, .small {
@@ -22,7 +23,7 @@ margin: 0px;
 }
 
 
-.chat li img {
+.usr {
 width: 45px;
 height: 45px;
 border-radius: 50em;
@@ -30,7 +31,7 @@ border-radius: 50em;
 -webkit-border-radius: 50em;
 }
 
-img {
+.img {
 max-width: 100%;
 }
 
@@ -135,4 +136,20 @@ outline: 0;
   font-weight:normal;
   color:#778187;
   background:#f2f2f3
+}
+.margin-div{
+  margin-bottom: 125px;
+  
+}
+
+.button{
+  margin:5px;
+  display: block;
+  width: 220px;
+  align-content: center;
+}
+
+.menu{
+  width: 70%;
+  height: 70%;
 }
