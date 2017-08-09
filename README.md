@@ -1,8 +1,6 @@
 # Elm2aklaty-chatbot
 chat bot based on python using framework Flask
 
-# DEMO
-[Elm2aklaty](https://lit-scrubland-97874.herokuapp.com/)
 
 ## Prerequisites
 * python
